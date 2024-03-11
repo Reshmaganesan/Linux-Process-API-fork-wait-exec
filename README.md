@@ -59,7 +59,7 @@ int main(void)
 
 
 
-##OUTPUT
+## OUTPUT
 
 
 ![alt text](image-1.png)
@@ -105,7 +105,7 @@ exit(0);}
 
 
 
-##OUTPUT
+## OUTPUT
 
 
 ![alt text](image.png)
@@ -163,7 +163,7 @@ printf("Running ps with execlp. Now with path specified\n");
 
 
 
-##OUTPUT
+## OUTPUT
 
 ![alt text](<Screenshot from 2024-03-11 18-21-12.png>)
 
