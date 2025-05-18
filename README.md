@@ -15,7 +15,7 @@ Navigate to any Linux environment installed on the system or installed inside a 
 
 ### Step 2:
 
-Write the C Program using Linux Process API - fork(), wait(), exec()
+Write the C Program using Linux Process API - fork(), wait(), exec() 
 
 ### Step 3:
 
@@ -23,9 +23,12 @@ Test the C Program for the desired output.
 
 # PROGRAM:
 
-## C Program to print process ID and parent Process ID using Linux API system calls
-```c
+Developed by : GAUTHAM KRISHNA
 
+Register Number : 212223240036
+
+## C Program to print process ID and parent Process ID using Linux API system calls
+~~~
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -44,41 +47,15 @@ int main(void)
 	printf("The process id: %d\n",process_id);
 	printf("The process id of parent function: %d\n",p_process_id);
 	return 0; }
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~
 
 ## OUTPUT
-
-
-![alt text](image-1.png)
-
-
-
-
-
-
-
-
-
+![323363651-277a5ef9-b0c2-4e5b-ad59-4a415db2c31c](https://github.com/user-attachments/assets/6dffb9f6-4fb8-4202-ac89-89b35803df0f)
 
 
 ## C Program to create new process using Linux API system calls fork() and exit()
-```c
+~~~
 #include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
 #include<stdlib.h>
 int main()
 { int pid; 
@@ -92,96 +69,35 @@ printf("I am parent, my pid is %d\n",getpid());
 sleep(100); 
 exit(0);} 
 }
+~~~
 
-
-```
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ## OUTPUT
-
-
-![alt text](image.png)
-
-
-
+![323363997-88cf0f5e-c8fc-4341-b71a-c87c6979fdf1](https://github.com/user-attachments/assets/4fa7b882-4a81-4933-9f31-0d57535d10eb)
 
 
 ## C Program to execute Linux system commands using Linux API system calls exec() family
-```c
-
-#include <stdio.h>
+~~~
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <sys/wait.h>
-#include <sys/types.h>
 int main()
-{       int status;
-        printf("Running ps with execlp\n");
-        execl("ps", "ps", "ax", NULL);
-        wait(&status);
-        if (WIFEXITED(status))
-                printf("child exited with status of %d\n", WEXITSTATUS(status));
-        else
-                puts("child did not exit successfully\n");
-        printf("Done.\n");
-printf("Running ps with execlp. Now with path specified\n");
-        execl("/bin/ps", "ps", "ax", NULL);
-        wait(&status);
-        if (WIFEXITED(status))
-                printf("child exited with status of %d\n", WEXITSTATUS(status));
-        else
-                puts("child did not exit successfully\n");
-        printf("Done.\n");
-        exit(0);}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{
+	printf("Running ps with execlp\n");
+	execlp("ps", "ps", "ax", NULL);
+	printf("Done.\n");
+	exit(0);
+}
+~~~
 
 ## OUTPUT
-
-![alt text](<Screenshot from 2024-03-11 18-21-12.png>)
-
-![alt text](<Screenshot from 2024-03-11 18-21-18.png>)
-
-
-
-![alt text](<Screenshot from 2024-03-11 18-21-24.png>)
-
-
-
-
-
-
-
-
-
-
+![323364224-1842c773-69d6-4a4d-9e90-fd5f92813952](https://github.com/user-attachments/assets/66153550-2e6b-42cd-b96b-b7579d2c43c2)
 
 
 # RESULT:
